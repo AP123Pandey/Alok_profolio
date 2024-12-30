@@ -1,0 +1,35 @@
+.hb-img {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust based on desired image size */
+    overflow: hidden;
+    border-radius: 15px; /* Soft rounded corners for a modern look */
+  }
+  
+  .hb-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire div without stretching */
+    filter: brightness(80%); /* Slightly darken the image for text visibility */
+    transition: filter 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  .hb-img:hover img {
+    filter: brightness(100%); /* Bring image back to normal brightness on hover */
+  }
+  
+  .hb-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to enhance text visibility */
+    z-index: 1;
+  }
+  
+  .hb-img img {
+    z-index: 0; /* Keep the image behind the overlay */
+  }
+  
